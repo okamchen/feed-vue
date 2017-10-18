@@ -1,26 +1,26 @@
 <template>
   <div class="card text-left">
-    <md-layout md-gutter>
-      <md-layout md-flex="70" class="avatar">
+    <div class="space-image">
+      <div class="avatar">
         <image-responsive :url="uriProfile" class="icon"/>
-      </md-layout>
-      <md-layout md-flex="20">
-        <md-layout md-gutter>
-          <span>{{ user }}</span>
-        </md-layout>
-        <md-layout md-gutter>
-          <span>{{ date }}</span>
-        </md-layout>
-      </md-layout>
-    </md-layout>
-
+      </div>
+    </div>
+    <div class="space-description">
+      <div>
+        <span>{{ user }}</span>
+      </div>
+      <div>
+        <span>{{ date }}</span>
+      </div>
+    </div>
+    
     <transition name="card-fade">
       <div class="card-body">
         <slot>
 
         </slot><!-- end panel-body -->
       </div>
-    </transition> 
+    </transition>
   </div><!-- end panel -->
 </template>
 
@@ -36,6 +36,16 @@ export default {
 </script>
 
 <style scoped>
+
+.space-image{
+  float: left;
+  width: 60px;
+}
+
+.space-description {
+  float: left;
+  margin-left: 10px;
+}
 
 .avatar {
   width: 60px;
@@ -59,29 +69,13 @@ export default {
 }
 
 .icon {
-  width: 100%;
-  height: 100%;
   display: block;
-}
-
-.description {
-  width: 70%
-}
-
-.description-user {
-  width: 100%
-}
-
-.description-date {
-  width: 100%
 }
 
 .card {
   padding: 0 auto;
   display: inline-block;
   margin: 5pt;
-  width: 60%;
-  height: 100%;
   vertical-align: top;
 }
 

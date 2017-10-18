@@ -29,8 +29,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #app {
-  text-align: center;
+  text-align: -webkit-center;
 }
 </style>

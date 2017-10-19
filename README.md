@@ -1,6 +1,6 @@
-# feed
+# Feed de acontecimento de Breaking Bad
 
-> Feed de notícias
+> Tudo que você precisa para olhar Breaking Bad (ou tomar um spoiller esperto hehe :stuck_out_tongue:)
 
 ## Build Setup
 

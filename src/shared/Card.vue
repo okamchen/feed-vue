@@ -1,27 +1,32 @@
 <template>
-  <div class="card text-left">
-    <div class="space-image">
-      <div class="avatar">
-        <image-responsive :url="uriProfile" class="icon"/>
+  <div class="card">
+    
+    <div class="card card-description text-left">
+      <div class="space-image">
+        <div class="avatar">
+          <image-responsive :url="uriProfile" class="icon"/>
+        </div>
       </div>
-    </div>
-    <div class="space-description">
-      <div>
-        <span>{{ user }}</span>
-      </div>
-      <div>
-        <span>{{ date }}</span>
+      <div class="space-description">
+        <div>
+          <span>{{ user }}</span>
+        </div>
+        <div>
+          <span>{{ date }}</span>
+        </div>
       </div>
     </div>
     
-    <transition name="card-fade">
-      <div class="card-body">
-        <slot>
+    <div class="card-body">
+      <transition name="card-fade" >
+        <div v-meu-transform:scale.animate="1.2">
+          <slot>
 
-        </slot><!-- end panel-body -->
-      </div>
-    </transition>
-  </div><!-- end panel -->
+          </slot>
+        </div>
+      </transition>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -74,9 +79,10 @@ export default {
 
 .card {
   padding: 0 auto;
-  display: inline-block;
+  display: inline-grid;
   margin: 5pt;
   vertical-align: top;
+  width: 50%;
 }
 
 .card-fade-enter, .card-fade-leave-active {
@@ -85,5 +91,14 @@ export default {
 
 .card-fade-enter-active, .card-fade-leave-active {
   transition: opacity .4s
+}
+
+.card-description {
+  float: left;
+  display: block;
+}
+
+.card-body {
+  overflow: hidden;
 }
 </style>

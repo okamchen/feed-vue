@@ -3,6 +3,7 @@
     <div v-for="post of posts">
       <card :user="post.user" :uriProfile="post.uriProfile" :date="post.date">
         <image-responsive :url="post.uriPost"/>
+        <span> {{post.description}} </span>
       </card>
     </div>
   </div>
@@ -23,7 +24,7 @@ export default {
     }
   },
   created () {
-    this.$http.jsonp('http://www.mocky.io/v2/59e6c0d60f00007f03ee9782')
+    this.$http.jsonp('http://www.mocky.io/v2/59e822ed0f00004704aef9f5')
       .then(res => this.posts = res.body.posts, err => console.log(err))
   },
 }
@@ -31,6 +32,7 @@ export default {
 
 <style scoped>
 #app {
-  text-align: -webkit-center;
+  text-align: center;
+  display: block;
 }
 </style>

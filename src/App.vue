@@ -1,9 +1,8 @@
 <template>
   <div id="app">
     <div v-for="post of posts">
-      <card :user="post.user" :uriProfile="post.uriProfile" :date="post.date">
+      <card :user="post.user" :uriProfile="post.uriProfile" :date="post.date" :description="post.description">
         <image-responsive :url="post.uriPost"/>
-        <span> {{post.description}} </span>
       </card>
     </div>
   </div>

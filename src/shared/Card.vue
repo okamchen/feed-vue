@@ -4,7 +4,7 @@
     <div class="card card-description text-left">
       <div class="space-image">
         <div class="avatar">
-          <image-responsive :url="uriProfile" class="icon"/>
+          <image-responsive :url="uriProfile" class="icon" v-meu-transform:scale.animate="1.2" />
         </div>
       </div>
       <div class="space-description">
@@ -26,6 +26,7 @@
         </div>
       </transition>
     </div>
+    <span>{{description}}</span>
   </div>
 </template>
 
@@ -36,7 +37,7 @@ export default {
   components :{
     'image-responsive' : ImageResponsive
   },
-  props : ['user', 'uriProfile', 'date']
+  props : ['user', 'uriProfile', 'date', 'description']
 }
 </script>
 

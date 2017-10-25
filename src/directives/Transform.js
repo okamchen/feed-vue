@@ -20,6 +20,7 @@ Vue.directive('meu-transform', {
             }
             
             el.style.transition = 'transform 0.5s';
+            el.style.overflow = 'hidden';
 
             this.style.transform = efect;
         });
